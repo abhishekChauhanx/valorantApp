@@ -57,6 +57,7 @@ img {
         border-radius: 30% 50% 10% 90%;
         filter: blur(80px);
     }
+
     /* &::after{
         content: "";
         position: absolute;
@@ -128,12 +129,53 @@ header h1 img {
 
     &:hover {
         background-color: #fff;
+      
     }
+
+
+    &:nth-child(1) ion-icon {
+        color: red;
+    }
+
+    &:nth-child(2):hover {
+        background-color: blue;
+    }
+
+    &:nth-child(3) ion-icon {
+        color: white;
+    }
+    &:nth-child(3):hover{
+        background-color: black;
+
+    }
+
+    &:nth-child(4) ion-icon {
+        color: white;
+    }
+
+    &:nth-child(4):hover {
+        background-color: green;
+    }
+
+    &:nth-child(5):hover {
+        background-color: blue;
+    }
+
 }
+
+
+
+
+
+
+
+
+
 
 
 .Login .list .items ion-icon {
     font-size: 3rem;
+
 }
 
 *::-webkit-scrollbar {
@@ -232,16 +274,16 @@ header h1 img {
     border: none;
 }
 
-.option .items input:checked~.content .input label::before{
+.option .items input:checked~.content .input label::before {
     left: 20px;
     background-color: white;
 }
 
-.option .items input:checked ~ .content{
+.option .items input:checked~.content {
     background-color: #fff;
 }
 
-.name{
+.name {
     font-size: 10px;
     text-align: center;
     font-weight: bold;
