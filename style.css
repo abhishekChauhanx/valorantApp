@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(160, 160, 160);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    height: 60px;
+    width: 60px;
+}
+
+#app {
+    height: 75vh;
+    width: 300px;
+    padding: 30px;
+    border-radius: 40px;
+    box-shadow: 20px 40px 40px #1b1919cc;
+    position: relative;
+    background-color: #fff;
+}
+
+.container {
+
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* z-index: -1; */
+    background-color: rgb(120, 23, 23);
+    border-radius: 40px;
+    padding: 20px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 30% 50% 10% 90%;
+        filter: blur(80px);
+    }
+    /* &::after{
+        content: "";
+        position: absolute;
+        top: 60%;
+        left: 140px;
+        width: 200px;
+        height: 200px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 30% 50% 10% 90%;
+        filter: blur(80px);
+    } */
+
+
+}
+
+header {
+    height: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+
+}
+
+header h1 {
+    height: 100%;
+    width: 100%;
+
+}
+
+header h1 img {
+
+    height: 100%;
+    width: 20%;
+    filter: brightness(140px);
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.title {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Login {
+    width: 100%;
+    overflow: auto;
+}
+
+.Login .list {
+    display: flex;
+}
+
+.Login .list .items {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 20px;
+    margin-right: 20px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    transition: 0.5s;
+
+    &:hover {
+        background-color: #fff;
+    }
+}
+
+
+.Login .list .items ion-icon {
+    font-size: 3rem;
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+.note {
+    border: 1px solid #58494987;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.title button {
+    padding: 5px 20px;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 2px solid #555;
+    font-weight: 600;
+
+}
+
+
+.option {
+    width: 100%;
+    overflow: auto;
+    margin-top: 10px;
+
+}
+
+.option .list {
+    display: flex;
+    width: max-content;
+    /* z-index: 2; */
+
+}
+
+.option .items {
+    width: 120px;
+    height: 150px;
+    margin-right: 20px;
+}
+
+.option .items input {
+    display: none;
+}
+
+
+.option .items .content {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border: 1px solid #fff4;
+
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff3;
+    transition: background 0.5s;
+}
+
+.option .items .input {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.option .input label {
+    width: 40px;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    position: relative;
+    transition: 0.5s;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 3px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 15px;
+        background-color: black;
+        border-radius: 50%;
+        transition: 0.5s;
+    }
+}
+
+.option .items input:checked~.content .input label {
+    background-color: #dc1313;
+    border: none;
+}
+
+.option .items input:checked~.content .input label::before{
+    left: 20px;
+    background-color: white;
+}
+
+.option .items input:checked ~ .content{
+    background-color: #fff;
+}
+
+.name{
+    font-size: 10px;
+    text-align: center;
+    font-weight: bold;
+}
